@@ -1,0 +1,42 @@
+
+
+<ion-content>
+  <ion-slides pager="true" #slides>
+    <ion-slide>
+      <h1>Bienvenido a Mis Finanzas</h1>
+      Mejor aplicacion de Finanzas para hogar.
+      <ion-button expand="button" color="light" (click)="next()">
+        Siguiente
+      </ion-button>
+    </ion-slide>
+
+    <ion-slide>
+      <h1>Configura tu aplicación</h1>
+      <ion-list>
+        <ion-radio-group [(ngModel)]="currency">
+          <ion-list-header>Moneda:</ion-list-header>
+
+          <ion-item>
+            <ion-label>Euro</ion-label>
+            <ion-radio slot="start" value="eur"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Dolar</ion-label>
+            <ion-radio slot="start" value="usd"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Pound</ion-label>
+            <ion-radio slot="start" value="gbp"></ion-radio>
+          </ion-item>
+
+        </ion-radio-group>
+      </ion-list>
+
+      <ion-button expand="button" color="light" (click)="saveAndStart()">
+        Comenzar
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
